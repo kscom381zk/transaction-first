@@ -1,0 +1,25 @@
+// Place all the styles related to the Transactions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 {
+  font-size: 40px;
+}
+
+
+
+table, th, td {
+  border: 2px solid #FF7700;
+}
+
+table {
+  
+}
+
+th { //This is the fill in the header columns (TableHeader, probably)
+  background-color: #FFDDBB;
+}
+
+tbody { //This is table body (the color of the panels that contain our data)
+  background-color: #AAAAAA;
+}

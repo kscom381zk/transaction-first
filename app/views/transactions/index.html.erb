@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p> <!>This is the green, success-write area.
+
+<h1>Transaction Database</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="4">Item</th>
+      <th>Details</th>
+      <th>Date</th>
+      <th>Person</th>
+      <th>State</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @transactions.each do |transaction| %>
+      <tr>
+        <td><%= link_to 'Show', transaction %></td>
+        <td><%= link_to 'Edit', edit_transaction_path(transaction) %></td>
+        <td><%= link_to 'Destroy', transaction, method: :delete, data: { confirm: 'Data cannot be recovered.</n>Are you sure?' } %></td>
+        <td><%= transaction.item %></td>
+        <td><%= transaction.details %></td>
+        <td><%= transaction.when %></td>
+        <td><%= transaction.person %></td>
+        <td><%= transaction.state %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Transaction', new_transaction_path %>
